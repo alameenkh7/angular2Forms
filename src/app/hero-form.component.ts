@@ -11,11 +11,15 @@ export class HeroFormComponent{
 
   powers=['Really smart','super Flexible', 'Super Hot', 'Weather change'];
 
-  //model=new Hero(1,'Bolt',this.powers[1],'Chuck over cool');
+  model=new Hero(1,'Bolt',this.powers[1],'Chuck over cool');
   submitted=false;
 
   onSubmit(){this.submitted=true;}
 
-  // getDiagnostic(){return JSON.stringify(this.model);}
+  get Diagnostic(){return JSON.stringify(this.model);}
+
+  newHero(){
+    this.model=new Hero(1,"","");
+  }
 
 }
